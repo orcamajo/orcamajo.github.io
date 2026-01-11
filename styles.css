@@ -245,8 +245,8 @@ img {
 
 .hero-image-container {
     position: relative;
-    width: 320px;
-    height: 320px;
+    width: 400px;
+    height: 400px;
 }
 
 .hero-image {
@@ -332,10 +332,9 @@ img {
 
 /* About Section */
 .about-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 4rem;
-    align-items: start;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
 
 .about-text p {
@@ -350,8 +349,10 @@ img {
 
 .about-stats {
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    order: -1;
 }
 
 .stat {
@@ -633,13 +634,7 @@ img {
         grid-template-columns: 1fr;
     }
 
-    .about-content {
-        grid-template-columns: 1fr;
-    }
-
     .about-stats {
-        flex-direction: row;
-        justify-content: center;
         flex-wrap: wrap;
     }
 
@@ -725,10 +720,6 @@ img {
 
     .btn {
         width: 100%;
-    }
-
-    .about-stats {
-        flex-direction: column;
     }
 
     .stat {
