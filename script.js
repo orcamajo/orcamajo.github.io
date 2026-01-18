@@ -1,17 +1,64 @@
+// Modal Functionality
+const floatingIcons = document.querySelectorAll('.floating-icon');
+const modals = document.querySelectorAll('.modal');
+const modalBackdrops = document.querySelectorAll('.modal-backdrop');
+const modalCloseButtons = document.querySelectorAll('.modal-close');
+
+// Open modal when clicking floating icons
+floatingIcons.forEach(icon => {
+    icon.addEventListener('click', () => {
+        const modalId = `modal-${icon.dataset.modal}`;
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.classList.add('active');
+            document.body.classList.add('modal-open');
+        }
+    });
+});
+
+// Close modal functions
+function closeAllModals() {
+    modals.forEach(modal => {
+        modal.classList.remove('active');
+    });
+    document.body.classList.remove('modal-open');
+}
+
+// Close on backdrop click
+modalBackdrops.forEach(backdrop => {
+    backdrop.addEventListener('click', closeAllModals);
+});
+
+// Close on close button click
+modalCloseButtons.forEach(button => {
+    button.addEventListener('click', closeAllModals);
+});
+
+// Close on Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeAllModals();
+    }
+});
+
 // Mobile Navigation Toggle
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
 
-navToggle.addEventListener('click', () => {
-    navToggle.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
+if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+        navToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+}
 
 // Close mobile menu when clicking a link
 document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
-        navToggle.classList.remove('active');
-        navMenu.classList.remove('active');
+        if (navToggle && navMenu) {
+            navToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+        }
     });
 });
 

@@ -13,176 +13,150 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">JM</a>
-            <ul class="nav-menu">
-                <li><a href="#about">About</a></li>
-                <li><a href="#expertise">Expertise</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="nav-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
+    <!-- Landing Section -->
+    <section class="landing">
+        <div class="landing-container">
+            <!-- Central Portrait -->
+            <div class="portrait-container">
+                <img src="jon_by_openai.png" alt="Jonathan Martin" class="portrait">
+            </div>
+
+            <!-- Floating Name -->
+            <h1 class="floating-name">Jonathan Martin</h1>
+
+            <!-- Floating Icons -->
+            <button class="floating-icon icon-about" data-modal="about" aria-label="About Me">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                </svg>
+                <span class="icon-label">About</span>
+            </button>
+
+            <button class="floating-icon icon-expertise" data-modal="expertise" aria-label="My Expertise">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
+                </svg>
+                <span class="icon-label">Expertise</span>
+            </button>
+
+            <button class="floating-icon icon-contact" data-modal="contact" aria-label="Contact Me">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+                <span class="icon-label">Contact</span>
             </button>
         </div>
-    </nav>
+    </section>
 
-    <header class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <p class="hero-greeting">Hello, I'm</p>
-                <h1 class="hero-name">Jonathan Martin</h1>
-                <h2 class="hero-title">IT Operations Leader & Project Management Professional</h2>
-                <p class="hero-description">
-                    With 19 years of diverse experience in IT operations, project management,
-                    and team leadership. Based in the Washington D.C. Metro Area.
-                </p>
-                <div class="hero-cta">
-                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                    <a href="#expertise" class="btn btn-secondary">View Expertise</a>
+    <!-- Modals -->
+    <div class="modal" id="modal-about">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <h2 class="modal-title">About Me</h2>
+            <div class="modal-body">
+                <div class="about-stats-modal">
+                    <div class="stat">
+                        <span class="stat-number">19</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">MBA</span>
+                        <span class="stat-label">Degree</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">PMP</span>
+                        <span class="stat-label">Since 2009</span>
+                    </div>
                 </div>
-            </div>
-            <div class="hero-visual">
-                <div class="hero-image-container">
-                    <img src="jon_by_openai.png" alt="Jonathan Martin" class="hero-image">
+                <div class="about-text-modal">
+                    <p>
+                        I'm an IT leader with 19 years of experience and a deep knowledge of enterprise
+                        IT practices and systems. My passion is to create high performance teams,
+                        consistent practices and a healthy culture.
+                    </p>
+                    <p>
+                        Currently serving as Senior Director of IT Infrastructure at Somatus, I lead
+                        teams across cloud engineering, governance, application support, M365 administration,
+                        service desk, and project management.
+                    </p>
+                    <p>
+                        I hold an MBA and BS in IT Systems Management from University of Maryland Global Campus,
+                        and have been PMP certified since 2009.
+                    </p>
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <span>Scroll</span>
-            <div class="scroll-arrow"></div>
-        </div>
-    </header>
+    </div>
 
-    <main>
-        <section id="about" class="section about">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>
-                            I'm an IT leader with 19 years of experience and a deep knowledge of enterprise
-                            IT practices and systems. My passion is to create high performance teams,
-                            consistent practices and a healthy culture.
-                        </p>
-                        <p>
-                            Currently serving as Senior Director of IT Infrastructure at Somatus, I lead
-                            teams across cloud engineering, governance, application support, M365 administration,
-                            service desk, and project management.
-                        </p>
-                        <p>
-                            I hold an MBA and BS in IT Systems Management from University of Maryland Global Campus,
-                            and have been PMP certified since 2009.
-                        </p>
-                    </div>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <span class="stat-number">19</span>
-                            <span class="stat-label">Years Experience</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">MBA</span>
-                            <span class="stat-label">Degree</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">PMP</span>
-                            <span class="stat-label">Since 2009</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="expertise" class="section expertise">
-            <div class="container">
-                <h2 class="section-title">What I Bring</h2>
-                <div class="expertise-grid">
-                    <div class="expertise-card">
-                        <div class="expertise-icon">
-                            <span class="emoji-icon">👥</span>
-                        </div>
+    <div class="modal" id="modal-expertise">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content modal-content-large">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <h2 class="modal-title">What I Bring</h2>
+            <div class="modal-body">
+                <div class="expertise-grid-modal">
+                    <div class="expertise-card-modal">
                         <h3>High Performing Teams</h3>
                         <p>
                             From establishing DevOps teams aligned to agile practices, to leading global PMO and
-                            infrastructure teams, I've built and scaled teams that deliver results. I've managed
-                            cross-functional groups spanning cloud engineering, service desk, and project management
-                            - improving observability, velocity, and service delivery across the board.
+                            infrastructure teams, I've built and scaled teams that deliver results.
                         </p>
                     </div>
-                    <div class="expertise-card">
-                        <div class="expertise-icon">
-                            <span class="emoji-icon">🌟</span>
-                        </div>
+                    <div class="expertise-card-modal">
                         <h3>Positive Cultures</h3>
                         <p>
-                            I believe healthy culture drives sustainable success. I've created and adopted ITSM
-                            processes organization-wide, established clear KPIs and SLAs that set teams up for
-                            success, and refined onboarding experiences to help people hit the ground running.
-                            Culture isn't just about policies - it's about enabling people to do their best work.
+                            I believe healthy culture drives sustainable success. I've created ITSM
+                            processes organization-wide and established clear KPIs and SLAs.
                         </p>
                     </div>
-                    <div class="expertise-card">
-                        <div class="expertise-icon">
-                            <span class="emoji-icon">💻</span>
-                        </div>
-                        <h3>Technical & Leadership Skills</h3>
+                    <div class="expertise-card-modal">
+                        <h3>Technical Leadership</h3>
                         <p>
                             My experience spans cloud and on-premise architectures, networking, SaaS, PaaS, IaaS,
-                            and enterprise service management. I've led cloud transformations into Azure, managed
-                            $14M+ in combined operational and capital budgets, overseen SOX and HIPAA compliance,
-                            and delivered major initiatives from SAP upgrades to global disaster recovery.
+                            and enterprise service management.
                         </p>
                     </div>
-                    <div class="expertise-card">
-                        <div class="expertise-icon">
-                            <span class="emoji-icon">🚀</span>
-                        </div>
-                        <h3>Growth Oriented Team Player</h3>
+                    <div class="expertise-card-modal">
+                        <h3>Continuous Growth</h3>
                         <p>
-                            My career reflects continuous growth: from IT Operations Manager to IT Consultant,
-                            to Head of Global IT Portfolio & PMO, to Director of Global Infrastructure, to Senior Director. Along the way, I completed my BS
-                            and MBA while working full-time, demonstrating my commitment to growth.
+                            My career reflects consistent improvement: from Help Desk Analyst to Sr. Dir. of Infrastructure all while
+             completing my BS and MBA.
                         </p>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section id="contact" class="section contact">
-            <div class="container">
-                <h2 class="section-title">Let's Connect</h2>
-                <div class="contact-content">
-                    <p class="contact-description">
-                        Interested in discussing IT operations, project management, or potential opportunities?
-                        I'd love to hear from you.
-                    </p>
-                    <div class="contact-links">
-                        <a href="https://www.linkedin.com/in/jonathancurtismartin/" target="_blank" rel="noopener" class="contact-link linkedin">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                            </svg>
-                            <span>Connect on LinkedIn</span>
-                        </a>
-                    </div>
-                    <p class="contact-location">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                            <circle cx="12" cy="10" r="3"/>
-                        </svg>
-                        Frederick, Maryland | Washington D.C. Metro Area
-                    </p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Jonathan Martin. All rights reserved.</p>
         </div>
-    </footer>
+    </div>
+
+    <div class="modal" id="modal-contact">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <h2 class="modal-title">Let's Connect</h2>
+            <div class="modal-body">
+                <p class="contact-description-modal">
+                    Interested in discussing IT operations, project management, or potential opportunities?
+                    I'd love to hear from you.
+                </p>
+                <div class="contact-links-modal">
+                    <a href="https://www.linkedin.com/in/jonathancurtismartin/" target="_blank" rel="noopener" class="contact-link linkedin">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        <span>Connect on LinkedIn</span>
+                    </a>
+                </div>
+                <p class="contact-location-modal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    Frederick, Maryland | Washington D.C. Metro Area
+                </p>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
